@@ -23,7 +23,7 @@ st.set_page_config(page_title="Gaussian Beam Profile", initial_sidebar_state="co
 
 
 st.title("Gaussian Beam Profile")
-
+st.markdown("Code provided by Tapio Simula")
 
 col1, col2 = st.columns([1,2])
 
@@ -31,8 +31,8 @@ with col1:
     # Define the beam parameters
     w0 = st.slider("waist size (mm)", 0.1, 10.0, 2.0)     # waist size
     zR = st.slider("Rayleigh range", 0.1, 20.0, 10.0)    # Rayleigh range
-    z  = st.slider("Position along z axis (mm)", 0.1, 500.0, 0.0)     # position along beam axis
-    wavelength = st.number_input("Wavelength of incident beam (nm)", 100, 1000, 700, step=50) # wavelength
+    z  = st.slider("Position along z axis (cm)", 0.1, 100.0, 0.0)     # position along beam axis
+    wavelength = st.number_input("Wavelength of incident beam (mm)", 100, 1000, 700, step=50) # wavelength
     k  = 2 * np.pi / (wavelength * 1e-9)   # wavenumber
 
 
